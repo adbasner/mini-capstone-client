@@ -3,7 +3,7 @@
 <% @products.each do |product|%>
   
   <p>id: <%= product['id'] %></p>
-  <p>name: <a href="/client/products/<%=product['id']%>"> <%= product['name'] %></a></p>
+  <p>name: <a href="/client/products/<%= product['id'] %>"> <%= product['name'] %></a></p>
   <p>description: <%= product['description'] %></p>
   <p>price: <%= product['price'] %></p>
   <p>image url: <%= product['image_url'] %></p>
