@@ -3,19 +3,19 @@
 <!-- <form action="/client/products/" method="post"  > -->
 <%= form_tag '/client/products/', method: :post do %>
   <div>
-    Name:<input type="text" name="input_name" id="input_name">
+    Name:<input style='background-color: lightgrey; padding: 5px; border-radius: 5px; margin-bottom: 5px;' type="text" name="input_name" id="input_name">
   </div>
   <div>
-    Description:<input type="textbox" name="input_description" id="input_description">
+    Description:<input style=' background-color: lightgrey; padding: 5px; border-radius: 5px; margin-bottom: 5px;' type="textbox" name="input_description" id="input_description">
   </div>
   <div>
-    Price:<input type="number" name="input_price" id="input_price">
+    Price:<input style='background-color: lightgrey; padding: 5px; border-radius: 5px; margin-bottom: 5px;'type="number" name="input_price" id="input_price">
   </div>
   <div>
-    Image url:<input type="text" name="input_image_url" id="input_image_url">
+    Image url:<input style='background-color: lightgrey; padding: 5px; border-radius: 5px; margin-bottom: 5px;' type="text" name="input_image_url" id="input_image_url">
   </div>
   <div>
-    <input type="submit" name="submit" value="add a coffee">  
+    <input style='padding: 10px; border-radius: 10px; color: white; background-color: dodgerblue; font-size: 16px;' type="submit" name="submit" value="Add a coffee">  
   </div>
 <!-- </form> -->
 <% end %>

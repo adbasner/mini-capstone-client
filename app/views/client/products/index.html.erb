@@ -2,11 +2,12 @@
 
 <% @products.each do |product|%>
   
-  <p>id: <%= product['id'] %></p>
+  <p id='<%= product['id'] %>'>id: <%= product['id'] %></p>
   <p>name: <a href="/client/products/<%= product['id'] %>"> <%= product['name'] %></a></p>
   <p>description: <%= product['description'] %></p>
   <p>price: <%= product['price'] %></p>
   <p>image url: <%= product['image_url'] %></p>
+  
+  <a href="http://localhost:3001/client/products/<%= product['id']%>"><button style='padding: 10px; border-radius: 10px; color: white; background-color: dodgerblue; font-size: 14px;'>View Product</button></a>
   <hr>
-
 <% end %>

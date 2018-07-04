@@ -5,6 +5,7 @@
 <p>description: <%= @product1['description'] %></p>
 <p>price: <%= @product1['price'] %></p>
 <p>image url: <%= @product1['image_url'] %></p>
-<a href="http://localhost:3001/client/products"><button>Return Home</button></a>
+<a href="http://localhost:3001/client/products#<%= @product1['id'] %>"><button style='padding: 10px; border-radius: 10px; color: white; background-color: dodgerblue; font-size: 14px;'>Return Home</button></a>
+<a href="http://localhost:3001/client/products/<%= @product1['id'] %>/edit"><button style='padding: 10px; border-radius: 10px; color: white; background-color: red; font-size: 14px;'>Edit</button></a>
 <hr>
 

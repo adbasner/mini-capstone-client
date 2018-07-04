@@ -1,0 +1,22 @@
+<div style= 'text-align: center'>
+<h1>Edit coffee</h1>
+<!-- <form action="/client/products/" method="post"  > -->
+<%= form_tag "/client/products/#{@product1['id']}", method: :patch do %>
+  <div>
+    Name:<input style='background-color: #efefef; padding: 5px; border-radius: 5px; margin-bottom: 5px; width: 200px;' type="text" name="input_name" id="input_name" value="<%= @product1['name'] %>">
+  </div>
+  <div>
+    Description:<input style=' background-color: #efefef; padding: 5px; border-radius: 5px; margin-bottom: 5px;  width: 200px;' type="textbox" name="input_description" id="input_description" value="<%= @product1['description'] %>">
+  </div>
+  <div>
+    Price:<input style='background-color: #efefef; padding: 5px; border-radius: 5px; margin-bottom: 5px; width: 200px;'type="number" name="input_price" id="input_price" value="<%= @product1['price'] %>">
+  </div>
+  <div>
+    Image url:<input style='background-color: #efefef; padding: 5px; border-radius: 5px; margin-bottom: 5px; width: 200px;' type="text" name="input_image_url" id="input_image_url" value="<%= @product1['image_url'] %>">
+  </div>
+  <div>
+    <input style='padding: 10px; border-radius: 10px; color: white; background-color: dodgerblue; font-size: 14px;' type="submit" name="submit" value="Save">  
+  </div>
+<!-- </form> -->
+<% end %>
+</div>
