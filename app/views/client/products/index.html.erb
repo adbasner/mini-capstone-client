@@ -1,4 +1,5 @@
-<h1>Pick a delicious coffee</h1>
+<h1>Look at all of these delicious coffees!</h1>
+<a href="http://localhost:3001/client/products/new"><button class='button button-create'>Add a new coffee</button></a>
 
 <% @products.each do |product|%>
   
@@ -8,6 +9,6 @@
   <p>price: <%= product['price'] %></p>
   <p>image url: <%= product['image_url'] %></p>
   
-  <a href="http://localhost:3001/client/products/<%= product['id']%>"><button style='padding: 10px; border-radius: 10px; color: white; background-color: dodgerblue; font-size: 14px;'>View Product</button></a>
+  <a href="http://localhost:3001/client/products/<%= product['id']%>"><button class="button button-home">View Product</button></a>
   <hr>
 <% end %>
