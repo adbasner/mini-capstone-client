@@ -1,14 +1,14 @@
-<h1>Look at all of these delicious coffees!</h1>
-<a href="http://localhost:3001/client/products/new"><button class='button button-create'>Add a new coffee</button></a>
+<h1 class='heading-wrapper'>Look at all of these delicious coffees!</h1>
 
 <% @products.each do |product|%>
-  
-  <p id='<%= product['id'] %>'>id: <%= product['id'] %></p>
-  <p>name: <a href="/client/products/<%= product['id'] %>"> <%= product['name'] %></a></p>
-  <p>description: <%= product['description'] %></p>
-  <p>price: <%= product['price'] %></p>
-  <p>image url: <%= product['image_url'] %></p>
-  
-  <a href="http://localhost:3001/client/products/<%= product['id']%>"><button class="button button-home">View Product</button></a>
-  <hr>
+  <div class='card'>
+    <p  id='<%= product['id'] %>'>id: <%= product['id'] %></p>
+    <p>name: <%= product['name'] %></p>
+    <p>description: <%= product['description'] %></p>
+    <p>price: <%= product['price'] %></p>
+    <p>image url: <%= product['image_url'] %></p>
+    
+    <a href="http://localhost:3001/client/products/<%= product['id']%>"><button class="button button-home">View Product</button></a>
+    </div>
+ 
 <% end %>

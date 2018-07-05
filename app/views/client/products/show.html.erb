@@ -1,11 +1,16 @@
-<h1>Single coffee</h1>
+<div class="card card-single">
+  <p>id: <%= @product1['id'] %></p>
+  <p>name: <%= @product1['name'] %></p>
+  <p>description: <%= @product1['description'] %></p>
+  <p>price: <%= @product1['price'] %></p>
+  <p>image url: <%= @product1['image_url'] %></p>
+  
+    <a href="http://localhost:3001/client/products/<%= @product1['id'] %>/edit"><button class='button button-edit'>Edit</button></a>
+  <div>
+    <a href="http://localhost:3001/client/products#<%= @product1['id'] %>"><button class='button button-home'>Return Home</button></a>
+  </div>
+</div>
 
-<p>id: <%= @product1['id'] %></p>
-<p>name: <%= @product1['name'] %></p>
-<p>description: <%= @product1['description'] %></p>
-<p>price: <%= @product1['price'] %></p>
-<p>image url: <%= @product1['image_url'] %></p>
-<a href="http://localhost:3001/client/products#<%= @product1['id'] %>"><button class='button button-home'>Return Home</button></a>
-<a href="http://localhost:3001/client/products/<%= @product1['id'] %>/edit"><button class='button button-edit'>Edit</button></a>
-<hr>
+
+
 

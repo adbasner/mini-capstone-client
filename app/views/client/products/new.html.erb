@@ -1,22 +1,29 @@
-<div style= 'text-align: center'>
-<h1>New coffee</h1>
+<div class="form-box">
+<h1 class="center">New coffee</h1>
 <!-- <form action="/client/products/" method="post"  > -->
 <%= form_tag '/client/products/', method: :post do %>
-  <div>
-    Name:<input style='background-color: lightgrey; padding: 5px; border-radius: 5px; margin-bottom: 5px;' type="text" name="input_name" id="input_name">
+  <div class="form">
+    <div>
+      Name:<input class='form-item' type="text" name="input_name" id="input_name">
+    </div>
+    <div>
+      Description:<input class='form-item' type="textbox" name="input_description" id="input_description">
+    </div>
+    <div>
+      Price:<input class='form-item' type="number" name="input_price" id="input_price">
+    </div>
+    <div>
+      Image url:<input class='form-item' type="text" name="input_image_url" id="input_image_url">
+    </div>
+    
+  </div> <!-- form -->
+
+  <div class="form-button">
+    <div>
+      <input class="button button-create" type="submit" name="submit" value="Add a coffee">
+    </div>
   </div>
-  <div>
-    Description:<input style=' background-color: lightgrey; padding: 5px; border-radius: 5px; margin-bottom: 5px;' type="textbox" name="input_description" id="input_description">
-  </div>
-  <div>
-    Price:<input style='background-color: lightgrey; padding: 5px; border-radius: 5px; margin-bottom: 5px;'type="number" name="input_price" id="input_price">
-  </div>
-  <div>
-    Image url:<input style='background-color: lightgrey; padding: 5px; border-radius: 5px; margin-bottom: 5px;' type="text" name="input_image_url" id="input_image_url">
-  </div>
-  <div>
-    <input style='padding: 10px; border-radius: 10px; color: white; background-color: dodgerblue; font-size: 16px;' type="submit" name="submit" value="Add a coffee">  
-  </div>
+  
 <!-- </form> -->
 <% end %>
-</div>
+</div> <!-- wrapper -->

@@ -1,27 +1,28 @@
-<div style= 'text-align: center'>
-<h1>Edit coffee</h1>
+<div class="form-box">
+<h1 class="center">Edit coffee</h1>
 <!-- <form action="/client/products/" method="post"  > -->
 <%= form_tag "/client/products/#{@product1['id']}", method: :patch do %>
-  <div>
-    Name:<input style='background-color: #efefef; padding: 5px; border-radius: 5px; margin-bottom: 5px; width: 200px;' type="text" name="input_name" id="input_name" value="<%= @product1['name'] %>">
+  <div class="form">  
+    <div>
+      Name:<input class="form-item" type="text" name="input_name" id="input_name" value="<%= @product1['name'] %>">
+    </div>
+    <div>
+      Description:<input class="form-item" type="textbox" name="input_description" id="input_description" value="<%= @product1['description'] %>">
+    </div>
+    <div>
+      Price:<input class="form-item" type="number" name="input_price" id="input_price" value="<%= @product1['price'] %>">
+    </div>
+    <div>
+      Image url:<input class="form-item" type="text" name="input_image_url" id="input_image_url" value="<%= @product1['image_url'] %>">
+    </div>
   </div>
-  <div>
-    Description:<input style=' background-color: #efefef; padding: 5px; border-radius: 5px; margin-bottom: 5px;  width: 200px;' type="textbox" name="input_description" id="input_description" value="<%= @product1['description'] %>">
-  </div>
-  <div>
-    Price:<input style='background-color: #efefef; padding: 5px; border-radius: 5px; margin-bottom: 5px; width: 200px;'type="number" name="input_price" id="input_price" value="<%= @product1['price'] %>">
-  </div>
-  <div>
-    Image url:<input style='background-color: #efefef; padding: 5px; border-radius: 5px; margin-bottom: 5px; width: 200px;' type="text" name="input_image_url" id="input_image_url" value="<%= @product1['image_url'] %>">
-  </div>
-  <div>
-    <input class="button button-home" type="submit" name="submit" value="Save">  
-  </div>
-<!-- </form> -->
+  <div class="form-button">
+    <input class="button button-edit" type="submit" name="submit" value="Save">  
+  </div><!-- </form> -->
 <% end %>
-<br>
+
 <%= form_tag "/client/products/#{@product1['id']}", method: :delete do %>
-  <div>
+  <div class="form-button">
     <input class="button button-danger" type="submit" name="submit" value="Delete">  
   </div>
 <!-- </form> -->
