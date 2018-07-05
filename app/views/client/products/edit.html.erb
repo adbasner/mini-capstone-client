@@ -16,13 +16,13 @@
       Image url:<input class="form-item" type="text" name="input_image_url" id="input_image_url" value="<%= @product1['image_url'] %>">
     </div>
   </div>
-  <div class="form-button">
+  <div class="center">
     <input class="button button-edit" type="submit" name="submit" value="Save">  
   </div><!-- </form> -->
 <% end %>
 
 <%= form_tag "/client/products/#{@product1['id']}", method: :delete do %>
-  <div class="form-button">
+  <div class="center">
     <input class="button button-danger" type="submit" name="submit" value="Delete">  
   </div>
 <!-- </form> -->

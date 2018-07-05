@@ -22,6 +22,7 @@ body {
   font-size: 14px; 
   width: 130px; 
   margin-bottom: 5px;
+  text-align: center;
 }
 
 /*basic blue button*/
@@ -42,13 +43,13 @@ body {
 /*new coffee button*/
 .button-create {
   background-color: purple;
-  width: 180px;
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #6f4e37;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 /* Style the links inside the navigation bar */
@@ -59,6 +60,19 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    border-right: dotted 1px black;
+}
+
+/*make navbar verticle at smaller screen size*/
+@media only screen and (max-width: 525px) {
+  .topnav a {
+    width: 100%;
+    border-bottom: dotted 1px black;
+  }
+
+  .topnav a:last-child {
+    border-bottom: none;
+  }
 }
 
 /* Change the color of links on hover */
@@ -104,16 +118,12 @@ text-align: right;
   width: 200px;
 }
 
-.form-button {
-  text-align: center;
- /* padding-left: 50px;*/
-}
-
+/*centers whatever*/
 .center {
   text-align: center;
-/*  padding-left: 15px;*/
 }
 
+/*box for coffees*/
 .card {
   width: 31.33%;
   text-align: center;
@@ -128,13 +138,7 @@ text-align: right;
   opacity: 0.85;
 }
 
-.card-single {
-  width: 33.33%;
-  margin-right: 33.33%;
-  margin-left: 33.33%;
-  padding-bottom: 20px;
-  height: auto;
-}
+/*changes layout of cards on small screens*/
 @media only screen and (max-width: 768px) {
   .card {
     width: 100%;
@@ -144,6 +148,13 @@ text-align: right;
   }
 }
 
-.clear {
-  clear: both;
+/*box for show page*/
+.card-single {
+  width: 33.33%;
+  margin-right: 33.33%;
+  margin-left: 33.33%;
+  padding-bottom: 20px;
+  height: auto;
 }
+
+
