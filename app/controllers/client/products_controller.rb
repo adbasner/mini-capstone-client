@@ -30,8 +30,12 @@ class Client::ProductsController < ApplicationController
 
     @product1 = response.body
 
+    #flash hash
+    flash[:success] = "You created a new coffee!"
+
     # return data
-    render 'show.html.erb'
+    # render 'show.html.erb'
+    redirect_to "/client/products/#{@product1['id']}"
   end
 
   def edit
@@ -56,12 +60,20 @@ class Client::ProductsController < ApplicationController
     parameters: client_params)
 
     @product1 = response.body
+    # flash hash
+    flash[:success] = "You updated the coffee!"
+
     # show
-    render 'show.html.erb'
+    # render 'show.html.erb'
+    redirect_to "/client/products/#{@product1['id']}"
   end
 
   def destroy
     response = Unirest.delete("localhost:3000/api/products/#{params[:id]}")
-    render 'destroy.html.erb'
+    flash[:danger] = "You deleted the coffee!"
+
+
+    # render 'destroy.html.erb'
+    redirect_to "/client/products/"
   end
 end

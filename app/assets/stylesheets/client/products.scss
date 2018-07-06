@@ -64,7 +64,7 @@ body {
 }
 
 /*make navbar verticle at smaller screen size*/
-@media only screen and (max-width: 525px) {
+@media only screen and (max-width: 768px) {
   .topnav a {
     width: 100%;
     border-bottom: dotted 1px black;
@@ -90,14 +90,23 @@ body {
 /*overall form formatting*/
 .form-box {
   background-color: white;
-  border: 1px solid black;
-  border-radius: 15px;
-  width: 345px;
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
   padding-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
   opacity: 0.85;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+  .form-box {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 /*overall form css*/
@@ -125,12 +134,12 @@ text-align: right;
 
 /*box for coffees*/
 .card {
-  width: 31.33%;
+  width: 32.33%;
   text-align: center;
-  border: 1px solid black;
+  border: 3px solid black;
   border-radius: 10px;
   float: left;
-  margin: 1%;
+  margin: 0.5%;
   padding: 10px;
   box-sizing: border-box;
   height: 300px;
@@ -142,7 +151,7 @@ text-align: right;
 @media only screen and (max-width: 768px) {
   .card {
     width: 100%;
- 
+    float: none;
     margin-left: auto;
     margin-right: auto; 
   }
@@ -150,11 +159,30 @@ text-align: right;
 
 /*box for show page*/
 .card-single {
-  width: 33.33%;
-  margin-right: 33.33%;
-  margin-left: 33.33%;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
   padding-bottom: 20px;
   height: auto;
+  float: none;
 }
 
+@media only screen and (max-width: 768px) {
+  .card-single {
+    width: 100%; 
+  }
+}
+
+.flash-hash {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 100%;
+  padding: 20px;
+  margin: 10px auto;
+  opacity: 0.85;
+  text-align: center;
+  font-size: 16px;
+  box-sizing: border-box;
+}
 

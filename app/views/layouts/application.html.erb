@@ -17,6 +17,12 @@
       <a href="/client/products/new">Add a coffee</a>
       <a href="#about">About</a>
     </div>
+
+    <% flash.each do |key, message| %>
+      <p class="flash-hash"><%= message %><p>
+    <% end %>
+
     <%= yield %>
+
   </body>
 </html>
