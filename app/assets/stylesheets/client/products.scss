@@ -13,6 +13,7 @@ body {
 .heading-wrapper {
   color: white;
   text-align: center;
+  text-shadow: 3px 3px black;
 }
 /* base button formatting */
 .button {
@@ -143,7 +144,7 @@ text-align: right;
   margin: 0.5%;
   padding: 10px;
   box-sizing: border-box;
-  height: 300px;
+  height: 350px;
   background-color: white;
   opacity: 0.85;
 }
@@ -187,3 +188,10 @@ text-align: right;
   box-sizing: border-box;
 }
 
+.discount {
+  color: red;
+}
+
+.everyday {
+  color: green;
+}

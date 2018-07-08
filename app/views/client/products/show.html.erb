@@ -2,7 +2,18 @@
   <p>id: <%= @product1['id'] %></p>
   <p>name: <%= @product1['name'] %></p>
   <p>description: <%= @product1['description'] %></p>
-  <p>price: <%= @product1['price'] %></p>
+  <% if @product1['formatted']['discounted'] %>
+    <p class="discount">price: $<%= @product1['price'] %>.00</p>
+    <p class="discount">tax: $<%= @product1['formatted']['tax'] %></p>
+    <p class="discount">total: $<%= @product1['formatted']['total'] %></p>
+    <p class="discount">Discount Item!!!</p>
+  <% else %>
+    <p class="everyday">price: $<%= @product1['price'] %>.00</p>
+    <p class="everyday">tax: $<%= @product1['formatted']['tax'] %></p>
+    <p class="everyday">total: $<%= @product1['formatted']['total'] %></p>
+    <p class="everyday">Everday Price</p>
+  <% end %>
+
   <p>image url: <%= @product1['image_url'] %></p>
   
     <a href="http://localhost:3001/client/products/<%= @product1['id'] %>/edit"><button class='button button-edit'>Edit</button></a>
