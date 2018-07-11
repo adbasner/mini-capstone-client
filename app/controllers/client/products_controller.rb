@@ -1,7 +1,11 @@
 class Client::ProductsController < ApplicationController
 
   def index
-    response = Unirest.get('http://localhost:3000/api/products')
+    user_input = params[:search]
+    response = Unirest.get('http://localhost:3000/api/products',
+      parameters: {
+        search: user_input
+      })
     @products = response.body
     render 'index.html.erb'
   end

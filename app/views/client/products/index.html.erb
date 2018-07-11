@@ -1,5 +1,18 @@
 <h1 class='heading-wrapper'>Look at all of these delicious coffees!</h1>
 
+<div class="center">
+  <%= form_tag '/client/products/', method: :get do %>
+    <div> 
+      <input class='form-item' type="text" name="search">
+    </div>
+    <div>
+      <input class="button button-home" type="submit" value="Search by name">
+    </div>
+  <% end %>
+</div>
+
+
+
 <% @products.each do |product|%>
   <div class='card'>
     <p  id='<%= product['id'] %>'>id: <%= product['id'] %></p>
@@ -8,10 +21,10 @@
     
     <p>
       <% if product['formatted']['discounted'] %>
-        <p class="discount">Price: $<%= product['price'] %>.00</p>
+        <p class="discount">Price: $<%= product['price'] %></p>
         <p class="discount">Discount Item!!!</p>
       <% else %>
-        <p class="everyday">Price: $<%= product['price'] %>.00</p>
+        <p class="everyday">Price: $<%= product['price'] %></p>
         <p class="everyday">Everday Price</p>
       <% end %>
     </p>
