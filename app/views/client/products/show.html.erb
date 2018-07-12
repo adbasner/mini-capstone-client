@@ -1,16 +1,17 @@
 <div class="card card-single">
-  <p>id: <%= @product1['id'] %></p>
-  <p>name: <%= @product1['name'] %></p>
-  <p>description: <%= @product1['description'] %></p>
+  <p>ID: <%= @product1['id'] %></p>
+  <p>Name: <%= @product1['name'] %></p>
+  <p>Description: <%= @product1['description'] %></p>
+  <p>Supplier: <%= @product1['supplier']['name'] %></p>
   <% if @product1['formatted']['discounted'] %>
-    <p class="discount">price: $<%= @product1['price'] %>.00</p>
-    <p class="discount">tax: $<%= @product1['formatted']['tax'] %></p>
-    <p class="discount">total: $<%= @product1['formatted']['total'] %></p>
+    <p class="discount">Price: $<%= @product1['price'] %>.00</p>
+    <p class="discount">Tax: $<%= @product1['formatted']['tax'] %></p>
+    <p class="discount">Total: $<%= @product1['formatted']['total'] %></p>
     <p class="discount">Discount Item!!!</p>
   <% else %>
-    <p class="everyday">price: $<%= @product1['price'] %>.00</p>
-    <p class="everyday">tax: $<%= @product1['formatted']['tax'] %></p>
-    <p class="everyday">total: $<%= @product1['formatted']['total'] %></p>
+    <p class="everyday">Price: $<%= @product1['price'] %>.00</p>
+    <p class="everyday">Tax: $<%= @product1['formatted']['tax'] %></p>
+    <p class="everyday">Total: $<%= @product1['formatted']['total'] %></p>
     <p class="everyday">Everday Price</p>
   <% end %>
 
