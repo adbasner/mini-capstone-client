@@ -15,9 +15,14 @@
     <p class="everyday">Everday Price</p>
   <% end %>
 
-  <p>image url: <%= @product1['image_url'] %></p>
+  <p><% @product1['images'].each do |image| %>   
+      <img src="<%= image['url'] %>">
+
+    <% end %>
+  </p>
   
-    <a href="http://localhost:3001/client/products/<%= @product1['id'] %>/edit"><button class='button button-edit'>Edit</button></a>
+  <a href="http://localhost:3001/client/products/<%= @product1['id'] %>/edit"><button class='button button-edit'>Edit</button></a>
+
   <div>
     <a href="http://localhost:3001/client/products#<%= @product1['id'] %>"><button class='button button-home'>Return Home</button></a>
   </div>
