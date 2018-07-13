@@ -135,21 +135,27 @@ text-align: right;
 /*centers whatever*/
 .center {
   text-align: center;
+
 }
 
 /*box for coffees*/
 .card {
-  width: 32.33%;
+  width: 75%;
   text-align: center;
   border: 3px solid black;
   border-radius: 10px;
-  float: left;
-  margin: 0.5%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
   padding: 10px;
   box-sizing: border-box;
-  height: 350px;
+  height: auto;
   background-color: white;
   opacity: 0.85;
+}
+
+.card:first-child {
+  margin-top: 10px;
 }
 
 /*changes layout of cards on small screens*/
@@ -202,4 +208,9 @@ text-align: right;
 .white {
   color: white;
   font-size: 16px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
 }

@@ -31,7 +31,7 @@ class Client::ProductsController < ApplicationController
         input_name: params[:input_name],
         input_description: params[:input_description],
         input_price: params[:input_price],
-        input_image_url: params[:input_image_url]
+        # input_image_url: params[:input_image_url]
       })
 
     @product1 = response.body
@@ -59,7 +59,7 @@ class Client::ProductsController < ApplicationController
         input_name: params[:input_name],
         input_description: params[:input_description],
         input_price: params[:input_price],
-        input_image_url: params[:input_image_url]
+        # input_image_url: params[:input_image_url]
         }
     # reponse
     response = Unirest.patch("localhost:3000/api/products/#{params[:id]}",
@@ -77,7 +77,6 @@ class Client::ProductsController < ApplicationController
   def destroy
     response = Unirest.delete("localhost:3000/api/products/#{params[:id]}")
     flash[:danger] = "You deleted the coffee!"
-
 
     # render 'destroy.html.erb'
     redirect_to "/client/products/"
