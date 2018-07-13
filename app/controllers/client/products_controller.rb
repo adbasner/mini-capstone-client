@@ -76,7 +76,7 @@ class Client::ProductsController < ApplicationController
 
   def destroy
     response = Unirest.delete("localhost:3000/api/products/#{params[:id]}")
-    flash[:danger] = "You deleted the coffee!"
+    flash[:warning] = "You deleted the coffee!"
 
     # render 'destroy.html.erb'
     redirect_to "/client/products/"

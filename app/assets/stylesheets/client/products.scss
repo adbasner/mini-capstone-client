@@ -19,6 +19,7 @@ body {
 .button {
   padding: 10px;
   border-radius: 10px;
+
   color: white;
   font-size: 14px; 
   width: 130px; 
@@ -29,21 +30,25 @@ body {
 /*basic blue button*/
 .button-home {
   background-color: dodgerblue; 
+  border-color: dodgerblue;
 }
 
 /*edit button*/
 .button-edit {
-  background-color: #5cb85c; 
+  background-color: #5cb85c;
+  border-color: #5cb85c; 
 }
 
 /*delete button*/
 .button-danger {
   background-color: red;
+  border-color: red;
 }
 
 /*new coffee button*/
 .button-create {
   background-color: purple;
+  border-color: purple;
 }
 
 /* Add a black background color to the top navigation */
@@ -56,7 +61,7 @@ body {
 /* Style the links inside the navigation bar */
 .topnav a {
     float: left;
-    color: #f2f2f2;
+    color: #ddd;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -91,7 +96,7 @@ body {
 
 /*overall form formatting*/
 .form-box {
-  background-color: white;
+  background-color: rgba(255,255,255,0.85);
   border: 3px solid black;
   border-radius: 10px;
   width: 100%;
@@ -100,7 +105,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
-  opacity: 0.85;
   box-sizing: border-box;
 }
 
@@ -113,10 +117,11 @@ body {
 
 /*overall form css*/
 .form {
-width: 300px;
+width: 350px;
 margin-left: auto;
 margin-right: auto;
 text-align: right;
+float: left;
 }
 
 /*form boxes*/
@@ -150,8 +155,8 @@ text-align: right;
   padding: 10px;
   box-sizing: border-box;
   height: auto;
-  background-color: white;
-  opacity: 0.85;
+  background-color: rgba(255,255,255,0.85);
+  height: 400px;
 }
 
 .card:first-child {
@@ -192,10 +197,19 @@ text-align: right;
   width: 100%;
   padding: 20px;
   margin: 10px auto;
-  opacity: 0.85;
   text-align: center;
   font-size: 16px;
   box-sizing: border-box;
+}
+
+.flash-danger {
+  background-color: red;
+  color: white;
+}
+
+.flash-success {
+  background-color: #5cb85c;
+  color: white;
 }
 
 .discount {

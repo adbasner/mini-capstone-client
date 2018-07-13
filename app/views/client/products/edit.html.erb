@@ -1,6 +1,5 @@
 <div class="form-box">
 <h1 class="center">Edit coffee</h1>
-<!-- <form action="/client/products/" method="post"  > -->
 <%= form_tag "/client/products/#{@product1['id']}", method: :patch do %>
   <div class="form">  
     <div>
@@ -12,9 +11,9 @@
     <div>
       Price:<input class="form-item" type="number" name="input_price" id="input_price" value="<%= @product1['price'] %>">
     </div>
-    <div>
+    <!-- <div>
       Image url:<input class="form-item" type="text" name="input_image_url" id="input_image_url" value="<%= @product1['image_url'] %>">
-    </div>
+    </div> -->
   </div>
   <div class="center">
     <input class="button button-edit" type="submit" name="submit" value="Save">  

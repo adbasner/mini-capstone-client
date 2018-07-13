@@ -19,7 +19,11 @@
     </div>
 
     <% flash.each do |key, message| %>
-      <p class="flash-hash"><%= message %><p>
+      <% if key != 'success' %>
+        <p class="flash-hash flash-danger "><%= message %><p>
+      <% else %>
+        <p class="flash-hash flash-success"><%= message %><p>
+      <% end %>
     <% end %>
 
     <%= yield %>
