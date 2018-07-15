@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <div class="topnav">
+    <nav class="topnav">
       <a href="/">Home</a>
       <a href="/client/products/">All coffees</a>
       <a href="/client/products/new">Add a coffee</a>
@@ -18,8 +18,10 @@
       <a href="/signup">Sign Up</a>
       <a href="/client/login">Log In</a>
       <a href="/client/logout" data-method="delete">Log Out</a>
-    </div>
-
+    </nav>
+    <% if @jwt %>
+      <p class="flash-hash flash-jwt"><%= @jwt %></p>
+    <% end %>
     <% flash.each do |key, message| %>
       <% if key != 'success' %>
         <p class="flash-hash flash-danger "><%= message %><p>
