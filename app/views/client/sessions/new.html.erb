@@ -1,0 +1,16 @@
+ <div class="form-box">  
+  <h1>Login</h1>
+    <div class="form">
+    <%= form_tag "/client/login", method: :post do %>
+      <div>
+        Email: <input type="email" name="email">
+      </div>
+      <div>
+        Password: <input type="password" name="password">
+      </div>
+    </div>
+    <div class="center">
+      <input type="submit" value="Log In">
+    </div>
+  <% end %>
+</div>
