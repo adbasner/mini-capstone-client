@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
   
   namespace :client do
+    # CRUD routes
+    # ---------------------------------
     get '/products/' => 'products#index'
     get '/products/new' => 'products#new'
     get '/products/:id' => 'products#show'
@@ -14,9 +16,15 @@ Rails.application.routes.draw do
     patch '/products/:id' => 'products#update'
     delete '/products/:id' => 'products#destroy'
 
-    # Login stuff 
+    # Login routes
+    # ----------------------------------
     get '/login' => 'sessions#new'
     post '/login' => 'sessions#create'
     delete '/logout' => 'sessions#destroy'
+
+    # Order routes
+    # ----------------------------------
+    get 'orders/:id' => 'orders#show'
+    
   end
 end
