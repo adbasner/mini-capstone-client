@@ -24,7 +24,8 @@ Rails.application.routes.draw do
 
     # Order routes
     # ----------------------------------
+    get '/orders/new' => 'orders#new'
     get 'orders/:id' => 'orders#show'
-    
+    post '/orders/' => 'orders#create'
   end
 end
