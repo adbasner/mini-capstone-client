@@ -19,6 +19,12 @@
       <a href="/client/login">Log In</a>
       <a href="/client/logout" data-method="delete">Log Out</a>
     </nav>
+    <nav class="topnav">
+      <a href="/client/products/?category=lightblend">Light Blend</a>
+      <a href="/client/products/?category=mediumblend">Medium Blend</a>
+      <a href="/client/products/?category=darkblend">Dark Blend</a>
+      <a href="/client/products/?category=blackasmysoulblend">Black as my Soul Blend</a>
+    </nav>
     <% if @jwt %>
       <p class="flash-hash flash-jwt"><%= @jwt %></p>
     <% end %>

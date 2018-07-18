@@ -1,7 +1,16 @@
 <div class="card card-single">
   <p>ID: <%= @product1['id'] %></p>
+
   <p>Name: <%= @product1['name'] %></p>
+
   <p>Description: <%= @product1['description'] %></p>
+
+  <p>Categories:</p>
+   <%= @product1['categories'] %>
+
+
+
+
   <% if @product1['supplier'] %>
     <p>Supplier: <%= @product1['supplier']['name'] %></p>
     <% end %>
