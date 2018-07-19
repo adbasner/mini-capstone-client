@@ -1,0 +1,19 @@
+<div class="form-box"> 
+<h1 class="center">Add to cart</h1>
+<%= form_tag '/client/carted_products/', method: :post do %>
+  <div class="form">
+    <div>
+      product_id: <input class='form-item' type="text" name="input_product_id" id="input_product_id">
+    </div>
+    <div>
+      quantity: <input class='form-item' type="textbox" name="input_quantity" id="input_quantity">
+    </div> 
+  </div> <!-- form -->
+
+  <div class="center">
+    <input class="button button-create" type="submit" name="submit" value="Add a coffee">
+  </div>
+  
+<!-- </form> -->
+<% end %>
+</div> <!-- wrapper -->
