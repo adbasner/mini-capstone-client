@@ -16,7 +16,7 @@ class Client::OrdersController < ApplicationController
 
     @order = response.body
 
-    flash[:success] = 'You ordered a coffee!'
+    flash[:success] = 'Your coffee has been ordered!'
 
     redirect_to "/client/orders/#{@order['id']}"
   end

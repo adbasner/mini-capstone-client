@@ -1,18 +1,28 @@
 <div class="card card-single">
-  <p>ID: <%= @order['id'] %></p>
-  <p>PRODUCT NAME: <%= @order['product_name'] %></p>
-<!--   <p>PRODUCT ID: <%= @order['product_id'] %></p>
-  <img src="<%= @order['product_image'] %>">
-  <p>QUANTITY: <%= @order['quantity'] %></p>
-  <p>PRICE:  <%= @order['product_price'] %></p>
- -->
-  <p>SUBTOTAL: <%= @order['subtotal'] %></p>
-  <p>TAX: <%= @order['tax'] %></p>
-  <p>TOTAL: <%= @order['total'] %></p>
-<!--   <p>ORDER DATE: <%= @order['created_at'] %></p>
-  <p>ORDERED BY: <%= @order['order_email'] %></p> -->
-  <p>USER ID: <%= @order['user_id'] %></p>
-  
+  <p>Order # <%= @order['id'] %></p>
+  <p>Name: <%= @order['user']['name'].capitalize %></p>
+  <p>Email: <%= @order['user']['email'] %></p>
+  <p>Subtotal: <%= @order['subtotal'] %></p>
+  <p>Tax: <%= @order['tax'] %></p>
+  <p>Total: <%= @order['total'] %></p>  
+  <hr>
+
+  <p>You ordered: <% @order %></p>
+
+    <% index = 0 %>
+    <% @order['products'].length.times do %>
+      
+      <p>
+        <%= @order['carted_products'][index]['quantity'] %> 
+        
+        <%= @order['products'][index]['name'] %> 
+        for 
+        <%= number_to_currency(@order['products'][index]['price']) %>
+        each.
+      </p>
+      <% index = index + 1 %>
+    <% end %>
+
 
 </div>
 

@@ -23,10 +23,10 @@
     <p>name: <%= product['name'] %></p>
     <p>description: <%= product['description'] %></p>
     <% if product['formatted']['discounted'] %>
-      <p class="discount">Price: $<%= product['price'] %></p>
+      <p class="discount">Price: <%= product['price'] %></p>
       <p class="discount">Discount Item!!!</p>
     <% else %>
-      <p class="everyday">Price: $<%= product['price'] %></p>
+      <p class="everyday">Price: <%= product['price'] %></p>
       <p class="everyday">Everday Price</p>
     <% end %>
     

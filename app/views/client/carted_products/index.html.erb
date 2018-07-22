@@ -1,20 +1,19 @@
 <div class="card">
+  <h2>Hello <%= @carted_products[0]['user_name'].capitalize; %>, here are the items in your cart.</h2>
   <% @carted_products.each do |carted_product| %>
-    <p>id: <%= carted_product['id'] %> </p>
-    <p>user_id: <%= carted_product['user_id'] %> </p>
-    <p>product_id: <%= carted_product['product_id'] %> </p>
-    <p>quantity: <%= carted_product['quantity'] %> </p>
-    <p>status: <%= carted_product['status'] %> </p>
-    <p>order_id: <%= carted_product['order_id'] %> </p>
-    <p>created_at: <%= carted_product['created_at'] %> </p>
-    <p>updated_at: <%= carted_product['updated_at'] %> </p>
-    <p>product: <%= carted_product['product']['name'] %> </p>
+    <p>Product: <%= carted_product['product']['name'] %> </p>
+    <p>Product_id: <%= carted_product['product_id'] %> </p>
+    <p>Price for each: <%= carted_product['product']['price'] %> </p>
+    <!-- <p>id: <%= carted_product['id'] %> </p> -->
+<!--     <p>User_id: <%= carted_product['user_id'] %> </p> -->
+    <p>Quantity: <%= carted_product['quantity'] %> </p>
+  <!--   <p>status: <%= carted_product['status'] %> </p> -->
     <hr>
   <% end %>
 
   <%= form_tag '/client/orders/', method: :post do %>
     <div class="center">
-      <input class="button button-home" type="submit" name="submit" value="Buy everything in the cart">
+      <input style="width: 250px" class="button button-home" type="submit" name="submit" value="Buy everything in the cart">
     </div>
   <% end %>
 </div>

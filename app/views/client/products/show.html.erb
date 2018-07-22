@@ -5,9 +5,11 @@
 
   <p>Description: <%= @product1['description'] %></p>
 
-  <p>Categories:</p>
-   <%= @product1['categories'] %>
-
+  <p>Categories: "
+   <% @product1['categories'].each do |category| %>
+    <%= category['name'] %>, 
+   <% end %>
+ "</p>
 
 
 
@@ -15,14 +17,14 @@
     <p>Supplier: <%= @product1['supplier']['name'] %></p>
     <% end %>
   <% if @product1['formatted']['discounted'] %>
-    <p class="discount">Price: $<%= @product1['price'] %></p>
-    <p class="discount">Tax: $<%= @product1['formatted']['tax'] %></p>
-    <p class="discount">Total: $<%= @product1['formatted']['total'] %></p>
+    <p class="discount">Price: <%= @product1['price'] %></p>
+    <p class="discount">Tax: <%= @product1['formatted']['tax'] %></p>
+    <p class="discount">Total: <%= @product1['formatted']['total'] %></p>
     <p class="discount">Discount Item!!!</p>
   <% else %>
-    <p class="everyday">Price: $<%= @product1['price'] %></p>
-    <p class="everyday">Tax: $<%= @product1['formatted']['tax'] %></p>
-    <p class="everyday">Total: $<%= @product1['formatted']['total'] %></p>
+    <p class="everyday">Price: <%= @product1['price'] %></p>
+    <p class="everyday">Tax: <%= @product1['formatted']['tax'] %></p>
+    <p class="everyday">Total: <%= @product1['formatted']['total'] %></p>
     <p class="everyday">Everday Price</p>
   <% end %>
 
@@ -39,7 +41,8 @@
     <a href="http://localhost:3001/client/products#<%= @product1['id'] %>"><button class='button button-home'>Return Home</button></a>
   </div>
   <hr>
-  <%= form_tag '/client/orders/', method: :post do %>
+
+  <%= form_tag '/client/carted_products/', method: :post do %>
     <div class="form">
       <div hidden>
         product_id: <input class='form-item' type="text" name="input_product_id" id="input_product_id" value="<%= @product1['id'] %>">
@@ -50,11 +53,13 @@
     </div> <!-- form -->
 
     <div class="center">
-      <input class="button button-create" type="submit" name="submit" value="Buy">
+      <input class="button button-create" type="submit" name="submit" value="Add to cart">
     </div>
-    
-  <!-- </form> -->
   <% end %>
+
+
+  <!-- </form> -->
+
 </div>
 
 
