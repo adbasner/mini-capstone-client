@@ -22,26 +22,31 @@ class Client::ProductsController < ApplicationController
   end
 
   def new
+    @product = {}
     render 'new.html.erb'
   end
 
   def create
     # get params
     # send params to api
-    response = Unirest.post('http://localhost:3000/api/products/', parameters: 
-      {
+    @product = {
         input_name: params[:input_name],
         input_description: params[:input_description],
-        input_price: params[:input_price],
-        # input_image_url: params[:input_image_url]
-      })
+        input_price: params[:input_price]
+    }
 
-    @product1 = response.body
+    response = Unirest.post('http://localhost:3000/api/products', 
+      parameters: @product
+      )
 
-    #flash hash
-    flash[:success] = "You created a new coffee!"
+    if response.code == 200
+      flash[:success] = "You created a new coffee!"
+      # @product1 = response.body Do not need with redirect
+    else
+      @errors = response.body['errors']
+      render 'new.html.erb'
+    end
 
-    # return data
     # render 'show.html.erb'
     redirect_to "/client/products/#{@product1['id']}"
   end
