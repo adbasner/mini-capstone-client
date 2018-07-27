@@ -16,30 +16,32 @@
   <% end %>
 </div>
 
-<div class="center">
-  <% @products.each do |product|%>
-  <div class='card'>
-    <p  id='<%= product['id'] %>'>id: <%= product['id'] %></p>
-    <p>name: <%= product['name'] %></p>
-    <p>description: <%= product['description'] %></p>
-    <% if product['formatted']['discounted'] %>
-      <p class="discount">Price: <%= product['price'] %></p>
-      <p class="discount">Discount Item!!!</p>
-    <% else %>
-      <p class="everyday">Price: <%= product['price'] %></p>
-      <p class="everyday">Everday Price</p>
-    <% end %>
-    
+<div class="container">
+  <div class="row">
+    <% @products.each do |product|%>
+    <div class='card col-lg-4'>
+      <p  id='<%= product['id'] %>'>id: <%= product['id'] %></p>
+      <p>name: <%= product['name'] %></p>
+      <p>description: <%= product['description'] %></p>
+      <% if product['formatted']['discounted'] %>
+        <p class="discount">Price: <%= product['price'] %></p>
+        <p class="discount">Discount Item!!!</p>
+      <% else %>
+        <p class="everyday">Price: <%= product['price'] %></p>
+        <p class="everyday">Everday Price</p>
+      <% end %>
+      
 
-    <p><% product['images'].each do |image| %>   
-      <img src="<%= image['url'] %>">
+      <p><% product['images'].each do |image| %>   
+        <img src="<%= image['url'] %>">
 
-    <% end %>
-    </p>
+      <% end %>
+      </p>
 
-    
-    <a href="http://localhost:3001/client/products/<%= product['id']%>"><button class="button button-home">View Product</button></a>
-    </div>
- 
-<% end %>
+      
+      <a href="http://localhost:3001/client/products/<%= product['id']%>"><button class="button button-home">View Product</button></a>
+      </div>
+   
+  <% end %>
+  </div>
 </div>

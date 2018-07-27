@@ -7,6 +7,7 @@ body {
   background-image: image-url("coffee.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-family: Helvetica, "Segoe UI", "sans-serif";
 }
 
 /*To make headers readable*/
@@ -160,9 +161,9 @@ float: left;
 
 }
 
-.card:first-child {
+/*.card:first-child {
   margin-top: 10px;
-}
+}*/
 
 /*changes layout of cards on small screens*/
 @media only screen and (max-width: 768px) {
