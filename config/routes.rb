@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'client/products#index'
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
-  
+
   namespace :client do
     # CRUD routes
     # ---------------------------------

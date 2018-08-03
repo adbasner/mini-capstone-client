@@ -1,5 +1,5 @@
 class Client::ProductsController < ApplicationController
-
+ 
   def index
     user_input = params[:search]
     sort_by = params[:sort_by]
